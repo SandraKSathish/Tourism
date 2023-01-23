@@ -1,0 +1,24 @@
+.login-buttons{
+    background: #1977cc;
+color: #fff;
+}
+.box-icons{
+    position: absolute;
+margin-top: 8px;
+margin-left: -19.25rem;
+}
+.reg-button{
+background: #337ab7;
+color: #fff;
+}
+.sunup-full-box{
+background: linear-gradient(-45deg, #dcd7e0, #fff);
+}
+@media only screen and (max-width: 600px) {
+.box-icons{
+    margin-left: -12.25rem;
+}
+}
+.sig-bg{
+    background-size: cover;
+}
