@@ -1198,9 +1198,9 @@ h3.must span {
   }
 }
 .section-bghistoty{
-  background: url(../img/gallery/kerela-1.webp) center center no-repeat;
+  background:url(../assets/img/gallery/kerela-1.webp) center center no-repeat;
     background-size: cover !important;
-    background: linear-gradient(0deg, rgb(0 204 255 / 58%), rgb(0 63 255 / 19%)), url(../img/gallery/kerela-1.webp);
+   background: linear-gradient(0deg, rgb(0 204 255 / 58%), rgb(0 63 255 / 19%)), url(../assets/img/gallery/kerela-1.webp);
     
 }
 h2.mykerala {
