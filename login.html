@@ -33,36 +33,37 @@
                   <div class="col-md-6 col-lg-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-black">
       
-                      <form>
-      
-                        <div class="d-flex align-items-center mb-3 pb-1">
-                          <span class="h1 fw-bold mb-0"></span>
-                        </div>
-      
-                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
-      
-                        <div class="form-outline mb-4">
-                          <label class="form-label" for="form2Example17">Email address</label>
-                          <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                         
-                        </div>
-      
-                        <div class="form-outline mb-4">
-                          <label class="form-label" for="form2Example27">Password</label>
-                          <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                          
-                        </div>
-      
-                        <div class="pt-1 mb-4">
-                          <button class="btn btn-dark btn-lg btn-block login-buttons" type="button">Login</button>
-                        </div>
-      
-                        <a class="small text-muted" href="#!">Forgot password?</a>
-                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="sinup.html"
-                            style="color: #393f81;">Register here</a></p>
-                        <a href="index2.html" class="small text-muted">Back to home.</a>
-                       
-                      </form>
+                     <form>
+
+                    <div class="d-flex align-items-center mb-3 pb-1">
+                      <span class="h1 fw-bold mb-0"></span>
+                    </div>
+
+                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example17">Email address</label>
+                      <input type="email" id="form2Example17" class="form-control form-control-lg" />
+
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example27">Password</label>
+                      <input type="password" id="form2Example27" class="form-control form-control-lg" />
+
+                    </div>
+
+                    <div class="pt-1 mb-4">
+                      <button class="btn btn-dark btn-lg btn-block login-buttons" type="button">Login</button>
+                    </div>
+
+                    <a class="small text-muted" href="#!">Forgot password?</a>
+                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="sinup.html"
+                        style="color: #393f81;">Register here</a></p>
+                    <a href="index2.html" class="small text-muted">Back to home.</a>
+
+                  </form>
+
       
                     </div>
                   </div>
@@ -72,6 +73,55 @@
           </div>
         </div>
       </section>
+	  
+<!--script-->
+	  
+	  <script>
+    const form = document.querySelector("form");
+    const email = document.querySelector("#form2Example17");
+    const password = document.querySelector("#form2Example27");
+    const loginBtn = document.querySelector(".login-buttons");
+
+    loginBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let emailValue = email.value;
+      let passwordValue = password.value;
+
+      // Email Validation
+      if (!emailValue) {
+        alert("Email field cannot be empty.");
+        return;
+      } else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(emailValue)) {
+        alert("Email is not in the correct format.");
+        return;
+      }
+
+      // Password Validation
+      if (!passwordValue) {
+        alert("Password field cannot be empty.");
+        return;
+      } else if (passwordValue.length < 8) {
+        alert("Password must be at least 8 characters long.");
+        return;
+      } else if (!/[a-z]/.test(passwordValue) || !/[A-Z]/.test(passwordValue) || !/\d/.test(passwordValue)) {
+        alert("Password must contain at least one lowercase, one uppercase, and one numeric character.");
+        return;
+      }
+      if (emailValue === "sandra@gamil.com" && passwordValue === "Sank@19#1999") {
+        window.location.href = "index2.html";
+      } else {
+        alert("Invalid email or password. Please enter valid email and password.")
+      }
+      return;
+
+      // Submit form data
+      console.log("Email:", emailValue);
+      console.log("Password:", passwordValue);
+    });
+
+  </script>
+
 
 </body>
   </html>
